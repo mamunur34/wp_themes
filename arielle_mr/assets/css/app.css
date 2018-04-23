@@ -1,0 +1,599 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Lato', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
+}
+
+h1, h2, h3, h4, h5 {
+  text-transform: uppercase;
+  line-height: 1;
+  font-weight: 700;
+}
+
+h1, h2, h3, h4, h5, p {
+  margin: 0 0 .8em;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover, a:focus {
+  text-decoration: none;
+}
+
+.blog__post__content {
+  display: block;
+}
+.blog__post__content .blog__post__thumb {
+  position: relative;
+}
+.blog__post__content .blog__post__thumb::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  content: '';
+  background: rgba(0, 0, 0, 0.12);
+  transition: all .5s ease-in;
+}
+.blog__post__content:hover .blog__post__thumb::before {
+  background: transparent;
+}
+
+body.overlay-body .overlay-menu h3 {
+  color: #fff;
+}
+
+body {
+  background: #Fff;
+}
+
+header .header__menu__list li {
+  display: inline-block;
+}
+header .header__menu__list li .header__menu__list__search {
+  display: block;
+  padding: 0 25px;
+}
+header .header__menu__list li .header__menu__list__search i {
+  font-size: 40px;
+}
+header .header__menu__list .brand {
+  display: block;
+  max-width: 250px;
+}
+header .header__menu__list .brand img {
+  margin-top: -6px;
+  margin-left: 68px;
+}
+
+.button__container {
+  position: fixed;
+  top: 70px;
+  left: 70px;
+  float: left;
+  width: 100%;
+  height: 27px;
+  cursor: pointer;
+  z-index: 100;
+  transition: opacity .25s ease;
+}
+.button__container:hover {
+  opacity: 1;
+}
+.button__container__icon {
+  width: 35px;
+  height: 27px;
+  float: left;
+  position: relative;
+}
+.button__container__icon.active .top {
+  transform: translateY(10px) translateX(0) rotate(45deg);
+  background: #fff;
+}
+.button__container__icon.active .middle {
+  opacity: 0;
+  background: #fff;
+}
+.button__container__icon.active .bottom {
+  transform: translateY(-11px) translateX(0) rotate(-45deg);
+  background: #fff;
+}
+.button__container span {
+ 
+  border: none;
+  height: 2px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all .35s ease;
+  cursor: pointer;
+}
+.button__container span:nth-of-type(2) {
+  top: 10px;
+}
+.button__container span:nth-of-type(3) {
+  top: 20px;
+}
+
+.overlay {
+  position: fixed;
+  background: #000;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .35s,visibility .35s;
+  overflow: hidden;
+}
+.overlay h3 {
+  color: #fff;
+}
+.overlay.open {
+  opacity: 1;
+  visibility: visible;
+  overflow: auto;
+}
+.overlay.open li {
+  animation: fadeInRight .5s ease forwards;
+  animation-delay: .35s;
+}
+.overlay.open li:nth-of-type(2) {
+  animation-delay: .4s;
+}
+.overlay.open li:nth-of-type(3) {
+  animation-delay: .45s;
+}
+.overlay.open li:nth-of-type(4) {
+  animation-delay: .50s;
+}
+.overlay .overlay-menu {
+  position: relative;
+  height: 70%;
+  top: 50%;
+  transform: translateY(-42%);
+  font-weight: 400;
+  text-align: left;
+}
+.overlay ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: inline-block;
+  position: relative;
+  height: 100%;
+}
+.overlay ul li {
+  display: block;
+  position: relative;
+  opacity: 0;
+}
+.overlay ul li a {
+  display: block;
+  position: relative;
+  color: #FFF;
+  text-decoration: none;
+  overflow: hidden;
+  margin-bottom: 25px;
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.search {
+  width: 75vw;
+  max-width: 0;
+  padding: 5px;
+  transition: all .5s ease;
+  position: absolute;
+  left: 111px;
+  box-sizing: border-box;
+  opacity: 0;
+  top: -6px;
+  border: 0;
+  outline: 0;
+  border-bottom: 1px solid #f1f1f1;
+  background: #000;
+  color: #fff;
+}
+
+.search.expanded {
+  max-width: 100%;
+  opacity: 1;
+}
+
+.icon {
+  position: absolute;
+  left: 55px;
+  top: -6px;
+  font-size: 40px;
+  color: #fff;
+}
+
+.header__menu.sticky .button__container span {
+  background: #000;
+}
+
+.header__menu.sticky .icon {
+  color: #000;
+}
+
+.copy__area .copy__area__text {
+  color: #fff;
+}
+
+.copy__area ul li {
+  display: inline-block !important;
+}
+
+.overlay__social li {
+  margin-left: 10px;
+}
+.overlay__social li:first-of-type {
+  margin-left: 0;
+}
+
+.overlay__social li a i {
+  font-size: 25px;
+}
+
+@media (max-width: 766px) {
+  .button__container {
+    left: 20px;
+    top: 45px;
+  }
+
+  .icon {
+    font-size: 30px;
+  }
+
+  header .header__menu__list .brand {
+    max-width: 190px;
+  }
+
+  header .header__menu__list .brand img {
+    margin-left: 57px;
+  }
+
+  .search {
+    width: 70%;
+    left: 95px;
+  }
+
+  .copy__area .col-md-6.text-right {
+    text-align: center !important;
+  }
+}
+.heading__dash {
+  display: block;
+  width: 80px;
+  height: 5px;
+  margin-bottom: 30px;
+}
+.heading__dash.green {
+  background: green;
+}
+.heading__dash.orange {
+  background: orange;
+}
+
+.post {
+  position: relative;
+}
+.post .post__content {
+  position: absolute;
+  bottom: 75px;
+  left: 70px;
+  right: 20px;
+  color: #fff;
+  display: block;
+}
+.post .post__content .heading h2 {
+  color: #fff;
+}
+
+
+.post__thumb2, .post__thumb3 {
+  background: url(http://barangarooumbracocms.azurewebsites.net/media/1130/1_theplace.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.hero .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+  overflow: hidden;
+}
+.hero .hero__featured {
+  background: url(http://barangarooumbracocms.azurewebsites.net/media/1130/1_theplace.jpg) no-repeat center center;
+  background-size: cover;
+}
+
+.media {
+  background: #ededed;
+  padding: 130px 0 130px;
+}
+.media h2 {
+  margin-bottom: 70px;
+}
+
+footer {
+  background: #000;
+}
+footer .footer__widget li {
+  margin-bottom: 20px;
+}
+footer .footer__widget a {
+  color: #fff;
+  text-transform: capitalize;
+  display: block;
+}
+footer .footer__widget__three .subscribe input {
+  border: 0;
+  outline: 0;
+  border-bottom: 2px solid #fff;
+  background: transparent;
+  color: #fff;
+  width: 295px;
+  height: 46px;
+}
+footer .footer__widget__three .submit {
+  cursor: pointer;
+  background: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  padding: 9px 29px;
+  margin-left: 5px;
+  transition: all .4s ease-in;
+  font-weight: 500;
+}
+footer .footer__widget__three .submit:hover {
+  background: #fff;
+  color: #000;
+  border: 2px solid #fff;
+}
+footer .footer__widget__three p {
+  color: #C2C2C2;
+  text-align: left;
+  font-size: 12px;
+  margin-top: 30px;
+}
+footer .footer__widget__three .footer__social {
+  text-align: left;
+  margin-top: 70px;
+  margin-bottom: 30px;
+}
+footer .footer__widget__three .footer__social li {
+  display: inline-block;
+  margin-left: 30px;
+}
+footer .footer__widget__three .footer__social li:first-of-type {
+  margin-left: 0;
+}
+footer .footer__widget__three .footer__social li a i {
+  color: #fff;
+  font-size: 24px;
+}
+
+@media (max-width: 766px) {
+  .footer__widget__three .subscribe {
+    text-align: left;
+  }
+
+  footer .footer__widget__three .footer__social,
+  footer .footer__widget__three p {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .footer__widget_two {
+    margin-top: 40px;
+  }
+
+  footer .footer__widget__three .subscribe input {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  footer .footer__widget__three .submit {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+@media (min-width: 767px) {
+  .footer__widget_one a {
+    -webkit-transform: translateY(80px);
+    -moz-transform: translateY(80px);
+    transform: translateY(80px);
+  }
+
+  footer .container-fluid {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+.blog__post__block {
+  display: block;
+  padding-left: 15%;
+  padding-top: 75px;
+  padding-bottom: 50px;
+  background: #fff;
+}
+.blog__post__block .blog__post__title {
+  color: #000;
+}
+.blog__post__block p {
+  color: #000;
+}
+
+.read__more {
+  color: #000;
+  text-transform: capitalize;
+  font-weight: 700;
+  margin-bottom: 50px;
+  font-size: 20px;
+  position: relative;
+}
+.read__more::after {
+  left: 0%;
+  right: 100%;
+  bottom: -0.5em;
+  content: "";
+  position: absolute;
+  border-top: 0.14em solid;
+  transition: all 0.2s ease-out;
+}
+.read__more:hover::after {
+  left: 0;
+  right: 0;
+  border-top-color: #00D5FF;
+}
+
+.blog__page h1, .blog__page h2, .blog__page h3 {
+  color: #000;
+}
+.blog__page p {
+  margin-bottom: 55px;
+}
+
+.breadcrumbs {
+  margin-top: 110px;
+  height: 230px;
+  transform: translateY(50%);
+}
+.breadcrumbs__nav li {
+  position: relative;
+  margin-right: 32px !important;
+}
+.breadcrumbs__nav li:first-of-type::before {
+  border: 0 !important;
+}
+.breadcrumbs__nav li::before {
+  top: calc(50% - 4px);
+  width: 0;
+  height: 0;
+  content: "";
+  position: absolute;
+  border-top: 4px solid transparent;
+  margin-left: calc(-1em - 2px);
+  border-left: 4px solid rgba(139, 139, 139, 0.5);
+  border-right: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+}
+.breadcrumbs__nav li .read__more {
+  font-size: 16px;
+  font-weight: 400;
+}
+.breadcrumbs__nav li .read__more:hover {
+  color: #00D5FF;
+}
+.breadcrumbs__nav li:last-of-type .read__more {
+  color: #00D5FF;
+}
+
+.category__intro {
+  max-width: 750px;
+}
+
+.blog__page .icon {
+  color: #000;
+}
+
+.overlay-body.blog__page .icon {
+  color: #fff !important;
+}
+
+.blog__page .button__container span {
+  background: #000;
+}
+
+@media (min-width: 767px) {
+  .breadcrumbs .container-fluid,
+  .category__intro .container-fluid {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+.single__blog__thumb1 {
+  background: url(http://barangarooumbracocms.azurewebsites.net/media/1193/photovoltaic-cells-on-international-towers-barnangaroo.jpg) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  padding-top: 205px;
+  padding-bottom: 205px;
+}
+.single__blog .single__blog__container {
+  max-width: 860px;
+  padding-top: 105px;
+}
+.single__blog .single__blog__container p {
+  margin-bottom: 30px;
+}
+.single__blog .single__blog__container .single__blog__quote {
+  position: relative;
+  padding: 25px 0;
+  font-size: 26px;
+  line-height: 36px;
+}
+.single__blog .single__blog__container .single__blog__quote::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  width: 80px;
+  height: 8px;
+  background: #FF8000;
+}
+.single__blog .single__blog__container .single__blog__quote::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  content: '';
+  width: 80px;
+  height: 8px;
+  background: #FF8000;
+}
+.single__blog .single__blog__container .single__blog__heading {
+  padding-top: 20px;
+}
+
+.single__blog__thumb__grid {
+  background: url("http://barangarooumbracocms.azurewebsites.net/media/1138/4_thegardens.jpg") no-repeat center center;
+  background-size: cover;
+}
+.single__blog__thumb__grid .container-fluid {
+  padding-left: 0;
+  padding-right: 0;
+}
+.single__blog__thumb__grid .container-fluid .single__blog__thumb__grid__meta {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 200px 60px 160px;
+}
+.single__blog__thumb__grid .container-fluid .single__blog__thumb__grid__meta h2, .single__blog__thumb__grid .container-fluid .single__blog__thumb__grid__meta p {
+  color: #fff;
+}
+
+@media (min-width: 767px) {
+  .single__blog__thumb__grid .single__blog__thumb__grid__meta {
+    width: 40%;
+  }
+
+  .heading__related {
+    padding-left: 45px;
+  }
+}

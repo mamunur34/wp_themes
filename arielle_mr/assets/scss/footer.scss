@@ -1,0 +1,109 @@
+footer {
+  background: #000;
+  .footer__widget {
+    li {
+      margin-bottom: 20px;
+    }
+    a {
+      color: #fff;
+      text-transform: capitalize;
+      display: block;
+    }
+  } 
+  
+  
+  .footer__widget__three {
+    .subscribe {
+      input {
+        border: 0;
+        outline: 0;
+        border-bottom: 2px solid #fff;
+        background: transparent;
+        color: #fff;
+        width: 295px;
+        height: 46px;
+        
+      }
+    }
+    .submit {
+      cursor: pointer;
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+      padding: 9px 29px;
+      margin-left: 5px;
+      transition: all .4s ease-in;
+      font-weight: 500;
+      &:hover {
+        background: #fff;
+        color: #000;
+        border: 2px solid #fff;
+      }
+    }
+    p {
+      color: #C2C2C2;
+      text-align: left;
+      font-size: 12px;
+      margin-top: 30px;
+    }
+
+    .footer__social {
+      text-align:left;
+      margin-top: 70px;
+      margin-bottom: 30px;
+      li {
+        display: inline-block;
+        margin-left: 30px;
+        &:first-of-type {
+          margin-left: 0;
+        }
+        a {
+          i {
+            color: #fff;
+            font-size: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 766px) {
+  .footer__widget__three {
+    .subscribe {
+      text-align: left;
+    }
+  }
+  footer .footer__widget__three .footer__social,
+  footer .footer__widget__three p {
+    margin-left: 0;
+    text-align: center;
+  }
+  .footer__widget_two {
+    margin-top: 40px;
+  }
+  footer .footer__widget__three .subscribe input {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  footer .footer__widget__three .submit {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+@media (min-width: 767px) { 
+  .footer__widget_one {
+    a {
+      -webkit-transform: translateY(80px);
+      -moz-transform: translateY(80px);
+      transform: translateY(80px);
+    }
+  }
+  footer .container-fluid {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+ }

@@ -1,0 +1,55 @@
+
+.heading__dash {
+  display: block;
+  width: 80px;
+  height: 5px;
+  margin-bottom: 30px;
+  &.green {
+    background: green;
+  }
+  &.orange {
+    background: orange;
+  }
+}
+.post {
+    position: relative;
+    .post__content {
+      position: absolute;
+      bottom: 75px;
+      left: 70px;
+      right:20px;
+      color: #fff;
+      display: block;
+
+      .heading h2 {
+        color: #fff;
+      }
+    }
+    &::before {
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      content: "";
+      position: absolute;
+      transition: background-color 0.5s;
+      background-color: rgba(0, 0, 0, 0.30);
+    }
+}
+
+.post__thumb2,.post__thumb3 {
+    background: url(http://barangarooumbracocms.azurewebsites.net/media/1130/1_theplace.jpg) no-repeat center center;
+    background-size: cover;
+  }
+
+.hero {
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+    overflow: hidden;
+  }
+  .hero__featured {
+    background: url(http://barangarooumbracocms.azurewebsites.net/media/1130/1_theplace.jpg) no-repeat center center;
+    background-size: cover;
+  }
+}

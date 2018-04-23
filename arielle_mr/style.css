@@ -1,0 +1,36 @@
+/*!
+Theme Name: Arielle
+Theme URI: http://underscores.me/
+Author: arielle_team
+Author URI: http://underscores.me/
+Description: Custom arielle Theme
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: LICENSE
+Text Domain: arielle_mr
+Tags: custom-background, custom-logo, custom-menu, featured-images, threaded-comments, translation-ready
+
+ */
+
+  footer#colophon {clear: both; 
+  }
+  .featured_image {width : 100%; height: 410px;}
+  .mr_min_heigh_830 {min-height: 830px;}
+  
+  #breadcrumbs{
+    list-style:none;
+    margin:10px 0;
+    overflow:hidden;
+}
+  
+#breadcrumbs li{
+    display:inline-block;
+    vertical-align:middle;
+    margin-right:15px;
+}
+  
+#breadcrumbs .separator{
+    font-size:18px;
+    font-weight:100;
+    color:#ccc;
+}

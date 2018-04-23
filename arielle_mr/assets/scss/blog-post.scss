@@ -1,0 +1,38 @@
+.blog__post__block {
+  display: block;
+  padding-left: 15%;
+  padding-top: 75px;
+  padding-bottom: 50px;
+  .blog__post__title {
+    color: #000;
+  }
+  p {
+    color: #000;
+  }
+}
+
+.read__more {
+    color: #000;
+    text-transform: capitalize;
+    font-weight: 700;
+    margin-bottom: 50px;
+    font-size: 20px;
+    position: relative;
+
+    &::after {
+      left: 0%;
+      right: 100%;
+      bottom: -0.5em;
+      content: "";
+      position: absolute;
+      border-top: 0.14em solid;
+      transition: all 0.2s ease-out;
+    }
+    &:hover  {
+      &::after {
+        left: 0;
+      right: 0;
+      border-top-color: #00D5FF;
+      }
+    }
+  }

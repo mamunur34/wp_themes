@@ -1,0 +1,74 @@
+.single__blog {
+  &__thumb1 {
+    background: url(http://barangarooumbracocms.azurewebsites.net/media/1193/photovoltaic-cells-on-international-towers-barnangaroo.jpg) no-repeat center center;
+    background-size: cover;
+    width: 100%;
+    padding-top: 205px;
+    padding-bottom: 205px;
+  }
+  .single__blog__container {
+    max-width: 860px;
+    padding-top: 105px;
+    p {
+      margin-bottom: 30px;
+    }
+    .single__blog__quote {
+      position: relative;
+      padding: 25px 0;
+      font-size: 26px;
+      line-height: 36px;
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        content: '';
+        width: 80px;
+        height: 8px;
+        background: #FF8000
+
+      }
+      &::after {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        width: 80px;
+        height: 8px;
+        background: #FF8000;
+
+      }
+    }
+    .single__blog__heading {
+      padding-top: 20px;
+    }
+  }
+}
+
+.single__blog__thumb__grid {
+  background: url('http://barangarooumbracocms.azurewebsites.net/media/1138/4_thegardens.jpg') no-repeat center center;
+  background-size: cover;
+  .container-fluid {
+    padding-left: 0;
+    padding-right: 0;
+
+    .single__blog__thumb__grid__meta {
+      background: rgba(0,0,0,.7);
+      padding: 200px 60px 160px;
+
+      h2,p {
+        color: #fff;
+      }
+    }
+  }
+}
+
+
+@media(min-width: 767px) {
+  .single__blog__thumb__grid .single__blog__thumb__grid__meta {
+    width: 40%;
+  }
+  .heading__related {
+    padding-left: 45px;
+  }
+}
+
